@@ -134,6 +134,7 @@
             chocolateButton.TabIndex = 9;
             chocolateButton.Text = "Chocolate";
             chocolateButton.UseVisualStyleBackColor = true;
+            chocolateButton.Click += chocolateButton_Click;
             // 
             // butterButton
             // 
@@ -143,6 +144,7 @@
             butterButton.TabIndex = 10;
             butterButton.Text = "Butter";
             butterButton.UseVisualStyleBackColor = true;
+            butterButton.Click += butterButton_Click;
             // 
             // almondButton
             // 
@@ -152,6 +154,7 @@
             almondButton.TabIndex = 11;
             almondButton.Text = "Almond";
             almondButton.UseVisualStyleBackColor = true;
+            almondButton.Click += almondButton_Click;
             // 
             // cheeseButton
             // 
@@ -161,6 +164,7 @@
             cheeseButton.TabIndex = 12;
             cheeseButton.Text = "Cheese";
             cheeseButton.UseVisualStyleBackColor = true;
+            cheeseButton.Click += cheeseButton_Click;
             // 
             // readyLabel
             // 
@@ -182,13 +186,14 @@
             // 
             // takeOutButton
             // 
+            takeOutButton.AutoSize = true;
             takeOutButton.Location = new Point(448, 185);
             takeOutButton.Name = "takeOutButton";
-            takeOutButton.Size = new Size(112, 34);
+            takeOutButton.Size = new Size(139, 35);
             takeOutButton.TabIndex = 15;
             takeOutButton.Text = "Take them out!";
             takeOutButton.UseVisualStyleBackColor = true;
-            takeOutButton.AutoSize = true;
+            takeOutButton.Click += takeOutButton_Click;
             // 
             // Form1
             // 
