@@ -37,13 +37,17 @@
             inTheOvenLabel = new Label();
             inTheOvenNum = new Label();
             addLabel = new Label();
-            chocolateButton = new Button();
-            butterButton = new Button();
-            almondButton = new Button();
-            cheeseButton = new Button();
+            //chocolateButton = new Button();
+            //butterButton = new Button();
+            //almondButton = new Button();
+            //cheeseButton = new Button();
             readyLabel = new Label();
             readyNum = new Label();
             takeOutButton = new Button();
+            chocolateButton = new PastryButton("Chocolate", 3000, inOvenQueue, readyQueue);
+            butterButton = new PastryButton("Butter", 5000, inOvenQueue, readyQueue);
+            almondButton = new PastryButton("Almond", 5000, inOvenQueue, readyQueue);
+            cheeseButton = new PastryButton("Cheese", 5000, inOvenQueue, readyQueue);
             SuspendLayout();
             // 
             // onOff
@@ -129,42 +133,45 @@
             // chocolateButton
             // 
             chocolateButton.Location = new Point(75, 185);
-            chocolateButton.Name = "chocolateButton";
-            chocolateButton.Size = new Size(112, 34);
-            chocolateButton.TabIndex = 9;
-            chocolateButton.Text = "Chocolate";
-            chocolateButton.UseVisualStyleBackColor = true;
-            chocolateButton.Click += chocolateButton_Click;
+            //chocolateButton.Name = "chocolateButton";
+            //chocolateButton.Size = new Size(112, 34);
+            //chocolateButton.TabIndex = 9;
+            //chocolateButton.Text = "Chocolate";
+            //chocolateButton.UseVisualStyleBackColor = true;
+            //chocolateButton.Click += chocolateButton_Click;
             // 
             // butterButton
             // 
             butterButton.Location = new Point(226, 185);
-            butterButton.Name = "butterButton";
+            /*butterButton.Name = "butterButton";
             butterButton.Size = new Size(112, 34);
             butterButton.TabIndex = 10;
             butterButton.Text = "Butter";
             butterButton.UseVisualStyleBackColor = true;
-            butterButton.Click += butterButton_Click;
+            butterButton.Click += butterButton_Click;*/
+
+
+
             // 
             // almondButton
             // 
             almondButton.Location = new Point(75, 250);
-            almondButton.Name = "almondButton";
+            /*almondButton.Name = "almondButton";
             almondButton.Size = new Size(112, 34);
             almondButton.TabIndex = 11;
             almondButton.Text = "Almond";
             almondButton.UseVisualStyleBackColor = true;
-            almondButton.Click += almondButton_Click;
+            almondButton.Click += almondButton_Click;*/
             // 
             // cheeseButton
             // 
             cheeseButton.Location = new Point(226, 250);
-            cheeseButton.Name = "cheeseButton";
+            /*cheeseButton.Name = "cheeseButton";
             cheeseButton.Size = new Size(112, 34);
             cheeseButton.TabIndex = 12;
             cheeseButton.Text = "Cheese";
             cheeseButton.UseVisualStyleBackColor = true;
-            cheeseButton.Click += cheeseButton_Click;
+            cheeseButton.Click += cheeseButton_Click;*/
             // 
             // readyLabel
             // 

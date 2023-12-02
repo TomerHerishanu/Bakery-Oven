@@ -11,6 +11,9 @@ namespace Bakery_Oven
         //private InOvenQueue inOvenQueue;
         static ConcurrentQueue<string> inOvenQueue = new ConcurrentQueue<string>();
         static ConcurrentQueue<string> readyQueue = new ConcurrentQueue<string>();
+
+        private static Label _inTheOvenNum;
+        private static Label _readyNum;
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +27,8 @@ namespace Bakery_Oven
             onOffService.StartAsync(CancellationToken.None);
             temperatureService = new TemperatureService();
             temperatureService.TemperatureChanged += CurrentTempChanged;
+            _inTheOvenNum = inTheOvenNum;
+            _readyNum = readyNum;
         }
 
 
@@ -61,17 +66,17 @@ namespace Bakery_Oven
             }
         }
 
-        private void UpdateInTheOvenNumLabel()
+        public static void UpdateInTheOvenNumLabel()
         {
-            inTheOvenNum.Text = $"{inOvenQueue.Count()}";
+            _inTheOvenNum.Text = $"{inOvenQueue.Count()}";
         }
 
-        private void UpdateReadyNumLabel()
+        public static void UpdateReadyNumLabel()
         {
-            readyNum.Text = $"{readyQueue.Count()}";
+            _readyNum.Text = $"{readyQueue.Count()}";
         }
 
-        private async void chocolateButton_Click(object sender, EventArgs e)
+        /*private async void chocolateButton_Click(object sender, EventArgs e)
         {
             inOvenQueue.Enqueue("Chocolate");
             UpdateInTheOvenNumLabel();
@@ -109,9 +114,9 @@ namespace Bakery_Oven
             {
                 await DequeueAfterDelay(10000);
             }
-        }
+        }*/
 
-        private async Task DequeueAfterDelay(int delayMili)
+        /*public static async Task DequeueAfterDelay(int delayMili)
         {
             await Task.Delay(delayMili);
 
@@ -150,7 +155,7 @@ namespace Bakery_Oven
                     await DequeueAfterDelay(nextDelay);
                 }
             }
-        }
+        }*/
 
         private void takeOutButton_Click(object sender, EventArgs e)
         {
